@@ -1,0 +1,58 @@
+<div class="navbar">
+  <button class="btn-logout" (click)="logout()">Cerrar sesión</button>
+</div>
+
+<div class="maestro-container">
+  <h1>Bienvenido, {{ nombreMaestro }}</h1>
+
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+
+  <div class="materias-section">
+    <h2>Listado de Materias</h2>
+    <table *ngIf="materias.length > 0" class="materias-table">
+      <thead>
+        <tr>
+          <th>Seleccionar</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Código</th>
+          <th>Horario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let materia of materias">
+          <td>
+            <input type="checkbox" [value]="materia.id" (change)="onSelectMateria($event, materia.id)"
+              [checked]="selectedMaterias.includes(materia.id)" />
+          </td>
+          <td>{{ materia.nombre }}</td>
+          <td>{{ materia.descripcion }}</td>
+          <td>{{ materia.codigo }}</td>
+          <td>
+            <select *ngIf="selectedMaterias.includes(materia.id)" (change)="onSelectHorario($event, materia.id)">
+              <option value="" disabled selected>Selecciona un horario</option>
+              <option *ngFor="let horario of horarios[materia.id]" [value]="horario.id">
+                {{ horario.dia }} {{ horario.hora_inicio }} - {{ horario.hora_fin }}
+              </option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn-primary" (click)="asignarMaterias()">Asignar Materias</button>
+  </div>
+
+  <div class="asignadas-section">
+    <h2>Materias Asignadas</h2>
+    <ul *ngIf="materiasAsignadas.length > 0">
+      <li *ngFor="let materia of materiasAsignadas" class="asignada-item">
+        <div class="asignada-info">
+          <span>{{ materia?.nombre }} - {{ materia?.dia }}: {{ materia?.hora_inicio }} - {{ materia?.hora_fin }}</span>
+          <button class="btn-remove" (click)="eliminarAsignacion(materia?.materia_id)">Eliminar</button>
+        </div>
+      </li>
+    </ul>
+    <p *ngIf="materiasAsignadas.length === 0">No tienes materias asignadas.</p>
+  </div>
+</div>

@@ -1,0 +1,150 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-logout {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #b02935;
+}
+
+/* Container */
+.maestro-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #333333;
+}
+
+h2 {
+  color: #555555;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Tables */
+.materias-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.materias-table th,
+.materias-table td {
+  text-align: left;
+  padding: 12px;
+}
+
+.materias-table thead th {
+  background-color: #007bff;
+  color: white;
+}
+
+.materias-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.materias-table tbody tr:hover {
+  background-color: #e8f7ff;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Messages */
+.error-message {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.success-message {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* List */
+.asignadas-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.asignadas-section li {
+  background-color: #f2f2f2;
+  margin: 8px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.asignada-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.asignada-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.btn-remove {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+  background-color: #b02935;
+}

@@ -1,0 +1,87 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-logout {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #b02935;
+}
+
+/* Container */
+.alumno-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #333333;
+}
+
+h2 {
+  color: #555555;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.materias-alumno {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.cargando, .error, .sin-materias {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.lista-materias {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.materia {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.materia h3 {
+  margin: 0;
+  color: #333;
+}
+
+.materia p {
+  margin: 5px 0;
+  color: #555;
+}
